@@ -1,33 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Characters</title>
+    <script src="https://www.myersdaily.org/joseph/javascript/md5.js"></script>
+</head>
 <body>
-    <div id="box"></div>
-    <!--No longer needs to <script type = >. for JS using "<script>" alone is fine since HTML5-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
-    <script>
-      const publicKey = "da4d97f480cf88990079b8840f27623c";
-      const privateKey = "f718261b4e6d51f28d90987960691bcd83c1e32b";
-      const apiEndpoint = "https://gateway.marvel.com/v1/public/characters";
-      const characterId = 1009610; // Iron Man's character ID
-      const apiUrl = `${apiEndpoint}/${characterId}?apikey=${publicKey}`;
-  
-      fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-  
-          const timestamp = new Date().getTime();
-          const hash = md5(timestamp + privateKey + publicKey);
-  
-          const apiUrlWithHash = `${apiUrl}&ts=${timestamp}&hash=${hash}`;
-  
-          return fetch(apiUrlWithHash);
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    </script>
-  </body>
-  
+    <h1>Adding Marvel Characters</h1>
+    <button class="add-character">Add New Character</button>
+    <div class="characters"></div>
+
+    <script src="./marvel.js"></script>
+
+</body>
+</html>
