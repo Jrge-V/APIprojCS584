@@ -33,13 +33,19 @@ function addNewCharacter(name) {
 
         //keyframe animations
         const animation = popmotion.keyframes({
-          values: [{ opacity: 0}, {opacity: 1}],
-          duration: 1000
+          values: [
+            { opacity: 0, x: -1000},
+            {opacity: 1, x: 0},
+          ],
+          duration: 1500
         });
 
         //play animation
         animation.start({
-          update: (v) => img.style.opacity = v.opacity //v is the current value of the animation at each frame
+          update: (v) => {
+            img.style.opacity = v.opacity; //v is the current value of the animation at each frame
+            img.style.transform = `translateX(${v.x}%)`;
+          }
         });
 
 
