@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <title>Marvel Characters</title>
     <script src="https://www.myersdaily.org/joseph/javascript/md5.js"></script>
+    <script src="https://unpkg.com/popmotion@8.1.24/dist/popmotion.global.min.js"></script>
+
 </head>
 <body>
     <h1>Adding Marvel Characters</h1>
-    <button class="add-character">Add New Character</button>
+    <form class="add-character-form">
+      <label>
+        Character Name:
+        <input type="text" class="character-name-input" required>
+      </label>
+      <button type="submit">Add New Character</button>
+    </form>
     <div class="characters"></div>
 
     <script src="./marvel.js"></script>
-
 </body>
 </html>
