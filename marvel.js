@@ -30,6 +30,19 @@ function addNewCharacter(name) {
 
         img.src = `${thumbnail.path}.${thumbnail.extension}`;
         img.alt = character.name;
+
+        //keyframe animations
+        const animation = popmotion.keyframes({
+          values: [{ opacity: 0}, {opacity: 1}],
+          duration: 1000
+        });
+
+        //play animation
+        animation.start({
+          update: (v) => img.style.opacity = v.opacity //v is the current value of the animation at each frame
+        });
+
+
         marvel.appendChild(img);
       });
   console.log("this will log first");
