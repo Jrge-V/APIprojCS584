@@ -1,0 +1,13 @@
+.characters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.characters img {
+  width: 100%;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: rgb(red, green, blue);
+}
