@@ -1,2 +1,2 @@
 # APIprojCS584
-JS Project using Marvels API
+Simple JS Project using Marvels API
