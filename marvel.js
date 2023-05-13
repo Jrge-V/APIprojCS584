@@ -1,5 +1,5 @@
-const publicKey = "";
-const privateKey = "";
+const publicKey = "da4d97f480cf88990079b8840f27623c";
+const privateKey = "f718261b4e6d51f28d90987960691bcd83c1e32b";
 
 const MARVEL_URL = (name) => {
   const timestamp = new Date().getTime();
